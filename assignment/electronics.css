@@ -11,6 +11,50 @@ body {background-color: #DEDEDE; font-family: 'Oxygen-Regular';
 	"footer footer footer";
 }
 
+.login {
+	display: flex;
+	justify-content: center;
+
+}
+.heading {
+	display: flex;
+	justify-content: center;
+	width: auto;
+	height: auto;
+
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: auto;
+	height: auto;
+}
+
+.formusername {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: auto;
+	height: auto;
+	margin-left: 80px;
+}
+
+.formpassword {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: auto;
+	height: auto;
+	margin-left: 80px;
+
+}
+
+.loginbutton {
+	display: flex;
+	justify-content: center;
+}
+
 h1 { font-family: 'Audiowide', cursive; margin: 0.4em;}
 aside h1 a {color: white;}
 header h1:before {content: "\1F5B3"; font-family: 'hack'; padding-right: 0.4em;}
@@ -67,3 +111,5 @@ form {overflow: auto;}
 .reviews .details {text-align: right;}
 
 h4 {margin-top: 1em; margin-bottom: 1em;}
+
+

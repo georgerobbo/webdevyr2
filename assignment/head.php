@@ -10,13 +10,13 @@
 
 
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li>Products
 					<ul>
-						<li><a href="#">TVs</a></li>
-						<li><a href="#">Computers</a></li>
-						<li><a href="#">Phones</a></li>
-						<li><a href="#">Gaming</a></li>
+						<li><a href="tv.php">TVs</a></li>
+						<li><a href="computer.php">Computers</a></li>
+						<li><a href="phone.php">Phones</a></li>
+						<li><a href="gaming.php">Gaming</a></li>
 					</ul>
 				</li>
 
