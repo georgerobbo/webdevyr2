@@ -2,6 +2,7 @@
 
 require 'head.php';
 
+session_start();
 ?>
 	
 		<main>
@@ -11,15 +12,7 @@ require 'head.php';
 
 			<hr />
 
-			<h2>Sample form</h2>
-			<form action="" method="post">
-				<label>Field one</label> <input type="text" name="1" />
-				<label>Field two</label> <input type="text" name="2" />
-				<label>Field three</label> <textarea></textarea>
 
-				<input type="submit" name="submit" value="submit" />
-			</form>
-			<hr />
 
 			<h2>Product list</h2>
 

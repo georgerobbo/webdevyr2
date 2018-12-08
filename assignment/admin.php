@@ -2,6 +2,9 @@
 
 require 'head.php';
 
+session_start();
+
+
 ?>
 
 <main>
