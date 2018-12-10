@@ -52,8 +52,7 @@ body {background-color: #DEDEDE; font-family: 'Oxygen-Regular';
 
 .loginbutton {
 	display: flex;
-	justify-content: center;
-}
+	justify-content: center;}
 
 h1 { font-family: 'Audiowide', cursive; margin: 0.4em;}
 aside h1 a {color: white;}
