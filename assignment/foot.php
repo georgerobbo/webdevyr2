@@ -7,7 +7,7 @@
 </aside>
 
 <footer>
-&copy; Ed's Electronics 2018 <a href="login.php">Admin login</a>
+&copy; Ed's Electronics 2018
 </footer>
 
 </body>

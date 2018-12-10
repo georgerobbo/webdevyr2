@@ -4,21 +4,23 @@ require 'head.php';
 
 session_start();
 
-if (isset($_POST['submit'])) {
-    //Check they entered the correct username/password
-    if ($_POST['username'] === 'admin' && $_POST['password'] === 'admin') {
-    $_SESSION['loggedin'] = true;
-    echo '<p>Welcome back ' . $_POST['username'] .'</p>';
-    echo '<p>This page is only visible if you entered the correct password!</p>';
-    }
-    //If they didn't, display an error message
-    else {
-    echo '<p>You did not enter the correct username and password</p>';
-    }
+if (isset($_POST['login']) && !empty($_POST['username']) 
+&& !empty($_POST['password'])) {
+ 
+if ($_POST['username'] == 'admin' && 
+   $_POST['password'] == 'admin') {
+   $_SESSION['valid'] = true;
+   $_SESSION['timeout'] = time();
+   $_SESSION['username'] = 'admin';
+   
+   echo 'You have entered valid username and password';
+}else {
+   $msg = 'Wrong username or password';
+}
 }
 
 ?>
-
+á
 <main>
     <div class="heading">
 
@@ -27,28 +29,13 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="login">
-        <form action="form">
-
-            <div class="form">
-
-                <div class="formusername">
-
-                    Username <br>
-
-                    <input type="text">
-                </div>
-                <div class="formpassword">
-                    Password <br>
-
-                    <input type="password">
-                </div>
-
-            </div>
-
-            <div class="loginbutton">
-                <input type="submit" value="Login">
-            </div>
-
+        <form class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+            ?>"
+            method="post">
+            <h4 class="form-signin-heading"> </h4>
+            <input type="text" class="form-control" name="username" placeholder="username" required autofocus>
+            <input type="password" class="form-control" name="password" placeholder="password" required>
+            <button class="loginbutton" type="submit" name="login">Login</button>
         </form>
     </div>
 
