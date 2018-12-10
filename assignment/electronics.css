@@ -17,6 +17,13 @@ body {
 		"footer footer footer";
 }
 
+.adminpanel{
+
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: 50% 50%;
+
+}
 
 .login {
 	display: flex;
