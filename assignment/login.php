@@ -4,7 +4,7 @@ require 'head.php';
 
 session_start();
 
-if (isset($_POST['button'])) {
+if (isset($_POST['submit'])) {
     //Check they entered the correct username/password
     if ($_POST['username'] === 'admin' && $_POST['password'] === 'admin') {
     $_SESSION['loggedin'] = true;
@@ -46,7 +46,7 @@ if (isset($_POST['button'])) {
             </div>
 
             <div class="loginbutton">
-                <input type="button" value="Login">
+                <input type="submit" value="Login">
             </div>
 
         </form>
