@@ -20,7 +20,7 @@ require 'head.php';
     </div>
 
     <div class="login">
-        <form method = "post" class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+        <form method="post" class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>"
             method="post">
             <h4 class="form-signin-heading"> </h4>
