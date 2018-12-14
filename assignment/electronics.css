@@ -17,12 +17,33 @@ body {
 		"footer footer footer";
 }
 
-.adminpanel{
+/*admin page */
 
-display: grid;
-grid-template-columns: 50% 50%;
-grid-template-rows: 50% 50%;
+.adminpanel {
 
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	padding-right: 30px;
+	margin: 40px;
+	column-gap: 30px;
+	row-gap: 30px;
+
+}
+
+.adminbuttons {
+	border-radius: 40px;
+	background: #333;
+	width: auto;
+	height: 150px;
+	text-align: center;
+}
+
+.admintext {
+	color: white;
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
 }
 
 .login {
@@ -290,6 +311,7 @@ h4 {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+
 form label {
 	clear: left;
 }

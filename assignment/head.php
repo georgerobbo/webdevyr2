@@ -24,7 +24,7 @@
 
 			<address>
 			
-			<div> <a href="login.php">Admin login</a> </div>
+			<div> <a href="login.php">Admin login</a>  <a href="logout.php">Logout</a> </div>
 				<p>We are open 9-5, 7 days a week. Call us on
 					<strong>01604 11111</strong>
 				</p>
