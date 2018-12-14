@@ -290,3 +290,6 @@ h4 {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
+form label {
+	clear: left;
+}

@@ -10,8 +10,7 @@ require 'head.php';
 
   <div class ='adminpanel'>
     
-knfdklvncxlnlvkxcn
-    
+    <a href="logout.php">logout</a>
     
     </div>
 

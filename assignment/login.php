@@ -2,25 +2,16 @@
 
 require 'head.php';
 
-session_start();
-
-if (isset($_POST['login']) && !empty($_POST['username']) 
-&& !empty($_POST['password'])) {
- 
-if ($_POST['username'] == 'admin' && 
-   $_POST['password'] == 'admin') {
-   $_SESSION['valid'] = true;
-   $_SESSION['timeout'] = time();
-   $_SESSION['username'] = 'admin';
-   
-   echo 'You have entered valid username and password';
-}else {
-   $msg = 'Wrong username or password';
-}
-}
-
+   session_start();
+   if (isset($_POST['password']) && $_POST['password'] == 'admin') {
+       setcookie("password", 'MYPASS');
+       header('Location: admin.php');
+       exit;
+   }
 ?>
-á
+<!DOCTYPE html>
+
+<HTML>
 <main>
     <div class="heading">
 
@@ -29,7 +20,7 @@ if ($_POST['username'] == 'admin' &&
     </div>
 
     <div class="login">
-        <form class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+        <form method = "post" class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>"
             method="post">
             <h4 class="form-signin-heading"> </h4>
@@ -40,6 +31,8 @@ if ($_POST['username'] == 'admin' &&
     </div>
 
 </main>
+
+
 
 <?php
 
