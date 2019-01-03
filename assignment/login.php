@@ -3,11 +3,6 @@
 require 'head.php';
 
    session_start();
-   if (isset($_POST['password']) && $_POST['password'] == 'admin') {
-       setcookie("password", 'MYPASS');
-       header('Location: admin.php');
-       exit;
-   }
 ?>
 <!DOCTYPE html>
 
