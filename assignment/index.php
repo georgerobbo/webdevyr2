@@ -1,6 +1,6 @@
 <?php
 
-require 'head.php';
+require 'header.php';
 
 session_start();
 ?>
@@ -99,6 +99,6 @@ session_start();
 
 <?php
 
-require 'foot.php';
+require 'footer.php';
 
 ?>

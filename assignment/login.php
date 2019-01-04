@@ -1,36 +1,62 @@
 <?php
+include "header.php";
 
-require 'head.php';
+if (isset($_SESSION['loggedin'])) {
+    header('Location: admin.php');
+   }
+   else {
+    echo 'Sorry, you must be logged in to view this page.';
+   }
+   
+$error = "";
 
-   session_start();
+if($_SERVER["REQUEST_METHOD"] == "GET") {
+	$username = "";
+	$password = "";
+} else if($_SERVER["REQUEST_METHOD"] == "POST") {
+	$username = trim($_POST["username"]);
+	$password = trim(sha1($_POST["password"]));
+
+	if(strlen($username) ==  0) {
+		$error .= "You must provide a username!<br/>";
+	  }
+	if(strlen($password) ==  0) {
+		$error .= "You must provide your password!<br/>";
+	  }
+	if(strlen($error) == 0) {
+		$stmt = $pdo->prepare('SELECT * FROM user WHERE username = :username AND password = :password');
+		unset($_POST['submit']);
+		$stmt->execute($_POST);
+
+		$row = $stmt -> fetch();
+
+		$_SESSION['username'] =  $row['username'];
+		$_SESSION['email'] =  $row['email'];
+		$_SESSION['dob'] =  $row['dob'];
+		$_SESSION['role'] =  $row['role'];
+		
+        header('Location: admin.php');
+        $_SESSION['loggedin'] = true;
+		
+		} else {
+			$error = "The username/password were not found.<br/>";
+	}
+}
 ?>
-<!DOCTYPE html>
 
-<HTML>
 <main>
-    <div class="heading">
-
-        <h1>Admin login</h1>
-
-    </div>
-
-    <div class="login">
-        <form method="post" class="form-signin" role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>"
-            method="post">
-            <h4 class="form-signin-heading"> </h4>
-            <input type="text" class="form-control" name="username" placeholder="username" required autofocus>
-            <input type="password" class="form-control" name="password" placeholder="password" required>
-            <button class="loginbutton" type="submit" name="login">Login</button>
-        </form>
-    </div>
-
+<article>
+<h2 id="signintext">Sign in</h2>
+<h3><?php echo $error; ?></h3>
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+ <div class="signinbox">
+	<label>Username:</label>
+	<input type="text" name="username" />
+	<label>Password:</label>
+	<input type="password" name="password" />
+	<input type="submit" name="submit" value=”Submit” />
+ </div>
+</form>
+</article>
 </main>
-
-
-
-<?php
-
-require 'foot.php';
-
-?>
+<?php include "footer.php";?>

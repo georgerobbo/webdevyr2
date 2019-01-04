@@ -10,9 +10,9 @@ require 'header.php';
 
             <div class="adminbuttons">
 
-                <a href="adminproduct.php">
+                <a href="adminaddcateories.php">
                     <div class="admintext"> </div>
-                    <h1>Products</h1>
+                    <h1>Add categories</h1>
 
                 </a>
 
@@ -20,9 +20,9 @@ require 'header.php';
 
             <div class="adminbuttons">
 
-                <a href="admincategory.php">
+                <a href="admineditcategory.php">
                     <div class="admintext">
-                        <h1>Categories</h1>
+                        <h1>Edit categories</h1>
                     </div>
                 </a>
 
