@@ -31,9 +31,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 		$row = $stmt -> fetch();
 
 		$_SESSION['username'] =  $row['username'];
-		$_SESSION['email'] =  $row['email'];
-		$_SESSION['dob'] =  $row['dob'];
-		$_SESSION['role'] =  $row['role'];
 		
         header('Location: admin.php');
         $_SESSION['loggedin'] = true;
@@ -45,18 +42,20 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 ?>
 
 <main>
-<article>
-<h2 id="signintext">Sign in</h2>
-<h3><?php echo $error; ?></h3>
-<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
- <div class="signinbox">
-	<label>Username:</label>
-	<input type="text" name="username" />
-	<label>Password:</label>
-	<input type="password" name="password" />
-	<input type="submit" name="submit" value=”Submit” />
- </div>
-</form>
-</article>
+	<article>
+		<h2 id="signintext">Sign in</h2>
+		<h3>
+			<?php echo $error; ?>
+		</h3>
+		<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+			<div class="signinbox">
+				<label>Username:</label>
+				<input type="text" name="username" />
+				<label>Password:</label>
+				<input type="password" name="password" />
+				<input type="submit" name="submit" value=”Submit” />
+			</div>
+		</form>
+	</article>
 </main>
 <?php include "footer.php";?>

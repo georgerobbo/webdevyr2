@@ -1,7 +1,15 @@
 <?php
-
 require 'header.php';
 
+if (!isset($_SESSION['loggedin'])){
+    header('Location: admin.php');
+
+}
+
+    if (!isset($_SESSION['loggedin'])){
+        header('Location: login.php');
+
+    }
 ?>
 <main>
     <div class=''>
@@ -42,6 +50,7 @@ require 'header.php';
 </main>
 
 <?php
+
 
 require 'footer.php';
 
