@@ -1,15 +1,5 @@
 <?php
 require 'header.php';
-
-if (!isset($_SESSION['loggedin'])){
-    header('Location: admin.php');
-
-}
-
-    if (!isset($_SESSION['loggedin'])){
-        header('Location: login.php');
-
-    }
 ?>
 <main>
     <div class=''>
@@ -35,6 +25,20 @@ if (!isset($_SESSION['loggedin'])){
                 </a>
 
 
+            </div>
+
+            <div class="adminbuttons">
+         <a href="useradd.php">
+         
+         <div class="admintext">
+         
+        <h1>Add a user</h1>
+
+         </div>
+         
+         </a>   
+            
+            
             </div>
 
 
