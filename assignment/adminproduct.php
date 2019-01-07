@@ -29,6 +29,17 @@ require 'header.php';
 
             </div>
 
+            <div class="adminbuttons">
+
+                <a href="admindeleteproduct.php">
+                    <div class="admintext">
+                        <h1>Delete Products</h1>
+                    </div>
+                </a>
+
+
+            </div>
+
 
         </div>
 

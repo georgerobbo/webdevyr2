@@ -1,10 +1,17 @@
 <?php
 require_once 'header.php';
 
-$sql = "INSERT INTO user (username, password)
-VALUES ('".$_POST["username"]."','".$_POST["password"]."',)";
 
-?>
+
+	if (isset($_POST['submit'])) {
+		$add = $pdo->prepare('INSERT INTO user (username, password) VALUES (:username, :password)');
+		unset($_POST['submit']);
+		$add->execute($_POST);
+		header("Refresh:0");
+
+	}
+
+	?>
 
 <main>
 	<article>
@@ -15,7 +22,7 @@ VALUES ('".$_POST["username"]."','".$_POST["password"]."',)";
 				<input id="username" type="text" name="username" />
 				<label>Password:</label>
 				<input id="password" type="password" name="password" />
-				<input type="submit" name="submit" value=Submit />
+				<input type="submit" name="submit" value=Add />
 			</div>
 		</form>
 	</article>

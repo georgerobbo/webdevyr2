@@ -1,5 +1,7 @@
 <?php
+
 require 'header.php';
+
 ?>
 <main>
     <div class=''>
@@ -8,9 +10,9 @@ require 'header.php';
 
             <div class="adminbuttons">
 
-                <a href="adminproduct.php">
+                <a href="adminadduser.php">
                     <div class="admintext"> </div>
-                    <h1>Products</h1>
+                    <h1>Add User</h1>
 
                 </a>
 
@@ -18,9 +20,9 @@ require 'header.php';
 
             <div class="adminbuttons">
 
-                <a href="admincategory.php">
+                <a href="adminedituser.php">
                     <div class="admintext">
-                        <h1>Categories</h1>
+                        <h1>Edit User</h1>
                     </div>
                 </a>
 
@@ -28,17 +30,14 @@ require 'header.php';
             </div>
 
             <div class="adminbuttons">
-         <a href="useradd.php">
-         
-         <div class="admintext">
-         
-        <h1>User Management</h1>
 
-         </div>
-         
-         </a>   
-            
-            
+                <a href="admindeleteuser.php">
+                    <div class="admintext">
+                        <h1>Delete User</h1>
+                    </div>
+                </a>
+
+
             </div>
 
 
@@ -54,7 +53,6 @@ require 'header.php';
 </main>
 
 <?php
-
 
 require 'footer.php';
 
