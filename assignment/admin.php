@@ -29,16 +29,16 @@ require 'header.php';
 
             <div class="adminbuttons">
          <a href="useradd.php">
-         
+
          <div class="admintext">
-         
+
         <h1>User Management</h1>
 
          </div>
-         
-         </a>   
-            
-            
+
+         </a>
+
+
             </div>
 
 
@@ -54,7 +54,6 @@ require 'header.php';
 </main>
 
 <?php
-
 
 require 'footer.php';
 

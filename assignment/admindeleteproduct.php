@@ -2,15 +2,15 @@
 
 require_once 'header.php';
 
-if($_SERVER["REQUEST_METHOD"] == "GET") {
-	$productname = "";
-	$productdesc = "";
-	$productprice = "";
-	$featured = "";
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $productname = "";
+    $productdesc = "";
+    $productprice = "";
+    $featured = "";
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$productname = trim($_POST["productname"]);
-	$productdesc = trim($_POST["productdesc"]);
-	$productprice = trim($_POST["productprice"]);
+    $productname = trim($_POST["productname"]);
+    $productdesc = trim($_POST["productdesc"]);
+    $productprice = trim($_POST["productprice"]);
     $featured = trim($_POST["featured"]);
 }
 
@@ -25,21 +25,20 @@ $productstable = $pdo->prepare('SELECT * FROM products');
 $productstable->execute();
 
 foreach ($productstable as $row) {
-echo '<tr>';
-echo '<td>' . $row['productname'] .'</td>';
-echo '<td>' . $row['productdesc'] .'</td>';
-echo '<td>' . $row['productprice'] .'</td>';
-echo '<td>' . $row['featured'] .'</td>';
-echo '</tr>';
+    echo '<tr>';
+    echo '<td>' . $row['productname'] . '</td>';
+    echo '<td>' . $row['productdesc'] . '</td>';
+    echo '<td>' . $row['productprice'] . '</td>';
+    echo '<td>' . $row['featured'] . '</td>';
+    echo '</tr>';
 }
-
 
 ?>
 
 <main>
 	<article>
 		<h2 id="signintext">Delete a product</h2>
-		<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<div class="signinbox">
 				<label>Product name:</label>
 				<input id="productname" type="text" name="productname" />

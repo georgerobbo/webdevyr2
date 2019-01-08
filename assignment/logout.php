@@ -1,5 +1,3 @@
 <?php
- unset($_SESSION['loggedin']);
-       header("Location: login.php");
-   
-?>
+unset($_SESSION['loggedin']);
+header("Location: login.php");
