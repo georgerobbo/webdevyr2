@@ -28,7 +28,7 @@ require 'header.php';
             </div>
 
             <div class="adminbuttons">
-         <a href="useradd.php">
+         <a href="adminuser.php">
 
          <div class="admintext">
 
