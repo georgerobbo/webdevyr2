@@ -3,7 +3,7 @@
 include 'header.php';
 
 if (isset($_POST['submit'])) {
-    $add = $pdo->prepare('INSERT INTO products (productname, productdesc, productprice, featured) VALUES (:productname, :productdesc, :productprice, :featured)');
+    $add = $pdo->prepare('INSERT INTO products (productname, productdesc, productprice, featured, productcar) VALUES (:productname, :productdesc, :productprice, :featured, :productcat)');
     unset($_POST['submit']);
     $add->execute($_POST);
     header("Refresh:0");
@@ -26,6 +26,8 @@ if (isset($_POST['submit'])) {
 				<input type="text" name="productprice" id="productprice">
 				<label>Featured?</label>
 				<input type="checkbox" name="featured" id="featured" name="featured">
+				<label>Product Category (Tv,phone,computer or gaming</label>
+				<input type="text" name="productcat" id="productcat" name="productcat">
 				<input type="submit" name="submit" value=Add />
 			</div>
 		</form>

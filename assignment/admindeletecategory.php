@@ -3,7 +3,7 @@
 require_once 'header.php';
 
 if (isset($_POST['submit'])) {
-    $delete = $pdo->prepare('DELETE FROM products WHERE productname="' . $_POST['productname'] . '"');
+    $delete = $pdo->prepare('DELETE FROM categories WHERE categoryname="' . $_POST['categoryname'] . '"');
     unset($_POST['submit']);
     $delete->execute($_POST);
     header("Refresh:0");
@@ -16,8 +16,8 @@ if (isset($_POST['submit'])) {
 		<h2 id="signintext">Delete a product</h2>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<div class="signinbox">
-				<label>Product name:</label>
-				<input id="productname" type="text" name="productname" />
+				<label>Category name:</label>
+				<input id="categoryname" type="text" name="categoryname" />
 				<input type="submit" name="submit" value=Delete />
 			</div>
 		</form>

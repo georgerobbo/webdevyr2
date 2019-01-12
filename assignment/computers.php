@@ -2,7 +2,7 @@
 
 require 'header.php';
 
-$results = $pdo->query('SELECT * FROM products');
+$results = $pdo->query('SELECT * FROM products WHERE productcat ="computer"');
 
 ?>
 

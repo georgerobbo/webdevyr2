@@ -1,8 +1,18 @@
+<?php
+
+$results = $pdo->query('SELECT * FROM products WHERE featured ="1"');
+
+
+?>
+
 <aside>
 
-    <h1><a href="#">Featured Product</a></h1>
-    <p><strong>Gaming PC</strong></p>
-    <p>Brand new 8 core computer with an RTX 2080ti </p>
+<?php	foreach ($results as $row) {
+    echo '<h3>' . $row['productname'] . '</h3>';
+    echo '<p>' . $row['productdesc'] . '</p>';
+    echo '<div class ="price">' . '£' . $row['productprice'] . '</div>';
+}
+?>
 
 </aside>
 
