@@ -22,7 +22,7 @@ $results = $pdo->query('SELECT * FROM products');
 
 		<li>
 
-	<?php	foreach ($results as $row) {
+			<?php	foreach ($results as $row) {
     echo '<h3>' . $row['productname'] . '</h3>';
     echo '<p>' . $row['productdesc'] . '</p>';
     echo '<div class ="price">' . '£' . $row['productprice'] . '</div>';
@@ -42,7 +42,7 @@ $results = $pdo->query('SELECT * FROM products');
 ?>
 		</li>
 		<li>
-		<?php	foreach ($results as $row) {
+			<?php	foreach ($results as $row) {
     echo '<h3>' . $row['productname'] . '</h3>';
     echo '<p>' . $row['productdesc'] . '</p>';
     echo '<div class ="price">' . '£' . $row['productprice'] . '</div>';

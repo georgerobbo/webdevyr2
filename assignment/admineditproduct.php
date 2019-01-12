@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
                 <label>Featured?:</label>
                 <input id="featured" type="checkbox" name="featured" />
                 <label>Product Category (Tv,phone,computer or gaming</label>
-				<input type="text" name="productcat" id="productcat" name="productcat">
+                <input type="text" name="productcat" id="productcat" name="productcat">
                 <input type="submit" name="submit" value=Edit />
             </div>
         </form>

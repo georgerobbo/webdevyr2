@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $delete->execute($_POST);
     header("Refresh:0");
 }
-    ?>
+?>
 
 <main>
 	<article>
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 			<div class="signinbox">
 				<label>Username:</label>
 				<input id="username" type="text" name="username" />
-                <h2>WARNING:Can not be reversed and must know username</h2>
+				<h2>WARNING:Can not be reversed and must know username</h2>
 				<input type="submit" name="submit" value=Delete />
 			</div>
 		</form>

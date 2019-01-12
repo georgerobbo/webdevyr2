@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $edit->execute($_POST);
     header("Refresh:0");
 }
-    ?>
+?>
 
 <main>
 	<article>
