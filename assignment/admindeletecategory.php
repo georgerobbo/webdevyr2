@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 
 <main>
 	<article>
-		<h2 id="signintext">Delete a product</h2>
+		<h2 id="signintext">Delete a category</h2>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<div class="signinbox">
 				<label>Category name:</label>

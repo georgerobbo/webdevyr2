@@ -19,7 +19,7 @@ require_once './includes/dbconnect.php';
 			<li>Products
 				<ul>
 					<li><a href="tv.php">TVs</a></li>
-					<li><a href="computesr.php">Computers</a></li>
+					<li><a href="computers.php">Computers</a></li>
 					<li><a href="phones.php">Phones</a></li>
 					<li><a href="gaming.php">Gaming</a></li>
 				</ul>

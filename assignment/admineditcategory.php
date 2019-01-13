@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
 
 <main>
 	<article>
-		<h2 id="signintext">Edit a user</h2>
+		<h2 id="signintext">Edit a category</h2>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<div class="signinbox">
 				<label>Old Category:</label>

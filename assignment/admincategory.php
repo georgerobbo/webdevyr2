@@ -10,7 +10,7 @@ require 'header.php';
 
             <div class="adminbuttons">
 
-                <a href="adminaddcateories.php">
+                <a href="adminaddcategory.php">
                     <div class="admintext"> </div>
                     <h1>Add categories</h1>
 

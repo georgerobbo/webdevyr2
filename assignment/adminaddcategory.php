@@ -3,7 +3,7 @@
 include 'header.php';
 
 if (isset($_POST['submit'])) {
-    $add = $pdo->prepare('INSERT INTO categories (categoryname VALUES (:categoryname)');
+    $add = $pdo->prepare('INSERT INTO categories (categoryname) VALUES (:categoryname)');
     unset($_POST['submit']);
     $add->execute($_POST);
     header("Refresh:0");

@@ -3,7 +3,7 @@
 include 'header.php';
 
 if (isset($_POST['submit'])) {
-    $add = $pdo->prepare('INSERT INTO products (productname, productdesc, productprice, featured, productcar) VALUES (:productname, :productdesc, :productprice, :featured, :productcat)');
+    $add = $pdo->prepare('INSERT INTO products (productname, productdesc, productprice, featured, productcat) VALUES (:productname, :productdesc, :productprice, :featured, :productcat)');
     unset($_POST['submit']);
     $add->execute($_POST);
     header("Refresh:0");
